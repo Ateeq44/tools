@@ -1,168 +1,325 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Loan EMI Calculator — CalcHub</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CalcHub • GPA Calculator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="css/style.css" rel="stylesheet">
 </head>
-<body class="bg-soft">
-        <!-- Top -->
-        <nav class="navbar bg-white border-bottom">
-            <div class="container">
-                <a class="navbar-brand fw-bold" href="index.html">
-                    <span class="brand">Calc</span>Hub </a>
-                <div class="d-flex gap-2">
-                    <a class="btn btn-outline-primary btn-sm" href="#">
-                        <i class="bi bi-grid"></i> Categories </a>
-                    <a class="btn btn-outline-secondary btn-sm" href="#">
-                        <i class="bi bi-share"></i> Share </a>
+<body class="ch-theme-purple">
+    <!-- Top Bar (like video) -->
+    <header class="ch-topbar">
+        <div class="container px-4">
+            <div class="d-flex align-items-center justify-content-between gap-3">
+                <!-- Left: hamburger + brand -->
+                <div class="d-flex align-items-center gap-3">
+                    <a href="index.html" class="ch-brand">
+                        <img src="images/logo.png">
+                    </a>
                 </div>
             </div>
-        </nav>
-        <main class="container py-4">
-            <!-- Breadcrumb + Title -->
-            <div class="mb-3">
-                <div class="text-secondary small">
-                    <a class="text-decoration-none text-secondary" href="index.html">Home</a>
-                    <span class="mx-1">/</span>
-                    <span>Finance</span>
-                    <span class="mx-1">/</span>
-                    <span class="text-dark">Loan EMI</span>
+        </div>
+    </header>
+    <!-- Split hero area (purple left + diagonal + white right) -->
+    <div class="">
+        <div class=""></div>
+        <div class="col-md-12 bg-pill">
+            <div class="container pills-main">
+                <div class="left-side">
+                    <div class="ch-sticky-wrap">
+                        <!-- Calculator Panel -->
+                        <div class="ch-calc-panel">
+                            <div class="ch-calc-list">
+                                <!-- Repeating rows like video -->
+                                <div class="ch-row">
+                                    <div class="ch-row-label">#1 Course Grade</div>
+                                    <div class="ch-row-control">
+                                        <select class="form-select form-select-sm ch-select">
+                                            <option selected>Select…</option>
+                                            <option>A</option>
+                                            <option>B</option>
+                                            <option>C</option>
+                                            <option>D</option>
+                                            <option>F</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="ch-row">
+                                    <div class="ch-row-label">#1 Credits</div>
+                                    <div class="ch-row-control">
+                                        <input type="number" class="form-control form-control-sm ch-input" value="1">
+                                    </div>
+                                </div>
+                                <div class="ch-row">
+                                    <div class="ch-row-label">#2 Course Grade</div>
+                                    <div class="ch-row-control">
+                                        <select class="form-select form-select-sm ch-select">
+                                            <option selected>Select…</option>
+                                            <option>A</option>
+                                            <option>B</option>
+                                            <option>C</option>
+                                            <option>D</option>
+                                            <option>F</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="ch-row">
+                                    <div class="ch-row-label">#2 Credits</div>
+                                    <div class="ch-row-control">
+                                        <input type="number" class="form-control form-control-sm ch-input" value="1">
+                                    </div>
+                                </div>
+                                <div class="ch-row">
+                                    <div class="ch-row-label">#3 Course Grade</div>
+                                    <div class="ch-row-control">
+                                        <select class="form-select form-select-sm ch-select">
+                                            <option selected>Select…</option>
+                                            <option>A</option>
+                                            <option>B</option>
+                                            <option>C</option>
+                                            <option>D</option>
+                                            <option>F</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="ch-row">
+                                    <div class="ch-row-label">#3 Credits</div>
+                                    <div class="ch-row-control">
+                                        <input type="number" class="form-control form-control-sm ch-input" value="1">
+                                    </div>
+                                </div>
+                                <div class="ch-row">
+                                    <div class="ch-row-label">#4 Course Grade</div>
+                                    <div class="ch-row-control">
+                                        <select class="form-select form-select-sm ch-select">
+                                            <option selected>Select…</option>
+                                            <option>A</option>
+                                            <option>B</option>
+                                            <option>C</option>
+                                            <option>D</option>
+                                            <option>F</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="ch-row">
+                                    <div class="ch-row-label">#4 Credits</div>
+                                    <div class="ch-row-control">
+                                        <input type="number" class="form-control form-control-sm ch-input" value="1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Result box like video -->
+                        <div class="ch-result-box">
+                            <div class="ch-result-title">Your GPA</div>
+                            <div class="ch-result-value">—</div>
+                            <div class="ch-result-note"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt. </div>
+                            <div class="d-flex align-items-center gap-2 mt-3">
+                                <button class="btn ch-outline-pill" type="button">Advanced mode</button>
+                                <button class="btn ch-round-btn" type="button" aria-label="Action">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Purple CTA button like video -->
+                        <a href="#" class="btn ch-cta-wide"> Check out 10 similar calculators <i class="bi bi-arrow-right"></i>
+                        </a>
+                        <!-- Pills / tiles like video -->
+                        <div class="row g-2 mt-3">
+                            <div class="col-6">
+                                <a href="#" class="ch-pill-tile">Classroom spacing <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="ch-pill-tile">Final grade <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="ch-pill-tile">GPA <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="ch-pill-tile ch-pill-strong">
+                                    <strong>7 more <i class="bi bi-arrow-right"></i>
+                                    </strong>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h1 class="h3 fw-bold mt-2 mb-1">Loan EMI Calculator</h1>
-                <p class="text-secondary mb-0">Calculate EMI, total interest and total payable amount instantly.</p>
+                <div class="right-side">
+                    <div class="ch-right-wrap">
+                        <h1 class="ch-page-title">College GPA Calculator</h1>
+                        <!-- Hello card (dismiss like video) -->
+                        <div class="ch-hello-card" id="chHelloCard">
+                            <button class="ch-hello-close" type="button" aria-label="Close" id="chHelloClose">
+                                <i class="bi bi-x"></i>
+                            </button>
+                            <div class="ch-hello-title">Hello!</div>
+                            <div class="ch-hello-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Start by entering some numbers. </div>
+                            <div class="ch-tip-box">
+                                <div class="ch-tip-label">Tip</div>
+                                <div class="ch-tip-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. You can calculate anything in any order. </div>
+                            </div>
+                            <div class="ch-toc-title">Table of contents:</div>
+                            <ul class="ch-toc">
+                                <li>
+                                    <a href="#s1">What is GPA?</a>
+                                </li>
+                                <li>
+                                    <a href="#s2">GPA scale (example)</a>
+                                </li>
+                                <li>
+                                    <a href="#s3">How to calculate GPA?</a>
+                                </li>
+                                <li>
+                                    <a href="#s4">Average GPA</a>
+                                </li>
+                                <li>
+                                    <a href="#s5">What is a good GPA?</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Article -->
+                        <article class="ch-article">
+                            <p class="ch-lead"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. </p>
+                            <h2 id="s1">What is GPA?</h2>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. </p>
+                            <h2 id="s2">GPA scale (example)</h2>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. </p>
+                            <h2 id="s3">How to calculate GPA?</h2>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. </p>
+                            <!-- Formula block (visual like video, but lorem) -->
+                            <div class="ch-formula">
+                                <div class="ch-formula-line">GPA = Σ( lorem × ipsum ) / Σ( credits )</div>
+                                <div class="ch-formula-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            </div>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus. </p>
+                            <h2 id="s4">Average GPA</h2>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. </p>
+                            <h2 id="s5">What is a good GPA?</h2>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. </p>
+                            <div class="ch-table-wrap">
+                                <table class="table table-sm ch-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Course</th>
+                                            <th>Credits</th>
+                                            <th>Grade</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Lorem</td>
+                                            <td>3</td>
+                                            <td>A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ipsum</td>
+                                            <td>4</td>
+                                            <td>B+</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="mb-0"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat condimentum velit. Class aptent taciti sociosqu. </p>
+                        </article>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
+    <section class="ch-viewed-strip py-5 my-5">
+        <div class="container-fluid px-4  container">
+            <h4 class="ch-viewed-title">People also viewed…</h4>
             <div class="row g-3">
-                <!-- Left: Form -->
-                <div class="col-lg-7">
-                    <div class="card card-soft rounded-4">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                <div class="fw-semibold">
-                                    <i class="bi bi-sliders brand"></i> Inputs
-                                </div>
-                                <span class="badge text-bg-primary-subtle text-primary border">Finance</span>
-                            </div>
-                            <form id="emiForm" class="row g-3">
-                                <div class="col-md-6">
-                                    <label class="form-label">Loan Amount</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text">PKR</span>
-                                        <input id="amount" type="number" class="form-control" value="500000" min="0" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Annual Interest Rate</label>
-                                    <div class="input-group">
-                                        <input id="rate" type="number" class="form-control" value="20" step="0.01" min="0" required>
-                                        <span class="input-group-text">%</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Loan Tenure</label>
-                                    <div class="input-group">
-                                        <input id="months" type="number" class="form-control" value="24" min="1" required>
-                                        <span class="input-group-text">Months</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Processing Fee (optional)</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text">PKR</span>
-                                        <input id="fee" type="number" class="form-control" value="0" min="0">
-                                    </div>
-                                </div>
-                                <div class="col-12 d-grid d-sm-flex gap-2">
-                                    <button type="submit" class="btn btn-primary text-white">
-                                        <i class="bi bi-calculator"></i> Calculate </button>
-                                    <button type="button" id="resetBtn" class="btn btn-outline-secondary"> Reset </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- SEO content / explanation -->
-                    <div class="card rounded-4 mt-3">
-                        <div class="card-body p-4">
-                            <h2 class="h6 fw-bold">How EMI is calculated?</h2>
-                            <p class="text-secondary mb-0 small"> EMI is based on principal, interest rate and tenure. We show monthly EMI, total interest and total payable amount. (Aap yahan apna short explanation + examples add kar den.) </p>
-                        </div>
-                    </div>
-                    <!-- FAQ -->
-                    <div class="card rounded-4 mt-3">
-                        <div class="card-body p-4">
-                            <h2 class="h6 fw-bold mb-3">FAQ</h2>
-                            <div class="accordion" id="faq">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1"> EMI kya hota hai? </button>
-                                    </h2>
-                                    <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faq">
-                                        <div class="accordion-body text-secondary small"> EMI (Equated Monthly Installment) monthly payment hoti hai jo aap loan repay karne ke liye dete hain. </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2"> Interest rate change ho to? </button>
-                                    </h2>
-                                    <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faq">
-                                        <div class="accordion-body text-secondary small"> Rate change ho to EMI bhi change ho sakti hai. Aap new rate dal kar re-calculate kar lein. </div>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="ch-view-card">
+                        <div class="ch-view-card-title">Cable impedance</div>
+                        <div class="ch-view-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                        <div class="mt-3">
+                            <a href="" class="ch-view-card-btn">Millionaire Calculator <i class="bi bi-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <!-- Right: Results -->
-                <div class="col-lg-5">
-                    <div class="card card-soft rounded-4 sticky-lg-top" style="top: 1rem;">
-                        <div class="card-body p-4">
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <div class="fw-semibold">
-                                    <i class="bi bi-graph-up brand"></i> Results
-                                </div>
-                                <span class="badge text-bg-success-subtle text-success border">Instant</span>
-                            </div>
-                            <div class="p-3 rounded-4 bg-light border mb-3">
-                                <div class="text-secondary small">Monthly EMI</div>
-                                <div id="emiOut" class="result-num">—</div>
-                            </div>
-                            <div class="row g-2">
-                                <div class="col-6">
-                                    <div class="p-3 rounded-4 bg-white border">
-                                        <div class="text-secondary small">Total Interest</div>
-                                        <div id="interestOut" class="fw-bold">—</div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="p-3 rounded-4 bg-white border">
-                                        <div class="text-secondary small">Total Payable</div>
-                                        <div id="totalOut" class="fw-bold">—</div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="p-3 rounded-4 bg-white border">
-                                        <div class="text-secondary small">Including Processing Fee</div>
-                                        <div id="grandOut" class="fw-bold">—</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr class="my-3">
-                            <div class="d-grid gap-2">
-                                <button class="btn btn-outline-primary" type="button">
-                                    <i class="bi bi-download"></i> Download Summary (UI Button) </button>
-                                <button class="btn btn-outline-secondary" type="button">
-                                    <i class="bi bi-clipboard"></i> Copy Results (UI Button) </button>
-                            </div>
-                            <div class="text-secondary small mt-3"> Disclaimer: Results are estimates for informational purposes. </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="ch-view-card">
+                        <div class="ch-view-card-title">High school GPA</div>
+                        <div class="ch-view-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                        <div class="mt-3">
+                            <a href="" class="ch-view-card-btn">Millionaire Calculator <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="ch-view-card">
+                        <div class="ch-view-card-title">Meat footprint</div>
+                        <div class="ch-view-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                        <div class="mt-3">
+                            <a href="" class="ch-view-card-btn">Millionaire Calculator <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="ch-view-card">
+                        <div class="ch-view-card-title">Millionaire</div>
+                        <div class="ch-view-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                        <div class="mt-3">
+                            <a href="" class="ch-view-card-btn">Millionaire Calculator <i class="bi bi-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/script.js"></script>
-    </body>
+        </div>
+    </section>
+    <!-- Footer (neutral) -->
+    <footer class="">
+        <div class="container">
+            <div class="row py-5 my-5">
+                <div class="col-md-5 mb-3">
+                    <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" aria-label="Bootstrap">
+                        <img src="images/logo.png">
+                    </a>
+                    <p class="text-body-secondary"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                </div>
+                <div class="col-md-3 mb-3"></div>
+                <div class="col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Blog</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">All calculators</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Collections</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

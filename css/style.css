@@ -1,0 +1,891 @@
+/* ============================
+   CalcHub - Unique Styles (ch- prefix)
+   Text: Poppins | Headings: Roboto
+   ============================ */
+
+   /* Fonts */
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+   :root{
+    --ch-blue:#0a183f;
+    --ch-blue-dark:#0b5f9a;
+
+    --ch-ink:#1b2635;
+    --ch-muted:#505050;
+    --ch-border: rgba(18,38,63,.08);
+    --ch-shadow: rgba(0, 0, 0, 0.2);
+    --ch-shadow-sm: rgba(0, 0, 0, 0.19);
+
+    --ch-radius: 14px;
+  }
+  
+  a{
+
+  }
+
+  /* Global fonts */
+  html, body{
+    height: 100%;
+    font-family: "Poppins", sans-serif !important;
+    color: var(--ch-ink);
+    background: #fff;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4, h5, h6,
+  .ch-title-font{
+    font-family: "Roboto", sans-serif !important;
+  }
+
+  /* Make form controls inherit Poppins */
+  button, input, select, textarea, label, .btn, .form-control, .form-select{
+    font-family: "Poppins", sans-serif !important;
+  }
+
+  a{ text-decoration: none; }
+  .ch-muted{ color: var(--ch-muted); }
+  .shadow{
+    box-shadow: 0 2px 10px 0 var(--ch-shadow-sm) !important;
+    border-radius: 10px;
+  }
+  .cate-box{
+    gap: 40px;
+  }
+  .oc-title{
+    color: var(--ch-muted);
+  }
+/* ---------------------------
+   Navbar
+   ---------------------------- */
+   .ch-navbar{
+    position: absolute;
+    inset: 0 0 auto 0;
+    z-index: 10;
+  }
+  .ch-brand{
+    font-weight: 800;
+    letter-spacing: .2px;
+    font-family: "Roboto", sans-serif !important; /* optional but clean */
+  }
+  .ch-brand small{
+    font-weight: 700;
+    opacity: .85;
+    letter-spacing: .6px;
+    font-family: "Poppins", sans-serif !important;
+  }
+
+/* ---------------------------
+   Home Hero (polygon bg)
+   ---------------------------- */
+   .ch-hero{
+    position: relative;
+    overflow: hidden;
+    color:#fff;
+    padding: 200px 0px;
+    background-image: url(../images/bg-header.png);
+    background-repeat: no-repeat;
+
+  }
+  .ch-hero .container{ position: relative; z-index: 2; }
+
+  .ch-search{
+    max-width: 760px;
+    margin-inline: auto;
+  }
+  .ch-search .form-control{
+    height: 46px;
+    border-radius: 999px;
+    padding-left: 18px;
+    border: 1px solid rgba(255,255,255,.25);
+    background: rgba(255,255,255,.10);
+    color:#fff;
+  }
+  .ch-search .form-control::placeholder{ color: rgba(255,255,255,.70); }
+  .ch-search .btn{
+    border-radius: 100px;
+    height: 46px;
+    padding-inline: 21px;
+  }
+  .read-about{
+    font-size: 14px;
+  }
+  /* Generic cards */
+  .ch-card{
+    background: #fff;
+    border-radius: var(--ch-radius);
+    box-shadow: 0 2px 10px 0 var(--ch-shadow-sm) !important;
+    border: 1px solid rgba(18,38,63,.06);
+  }
+  .ch-card-sm{
+    background:#fff;
+    border-radius: 12px;
+    box-shadow: var(--ch-shadow-sm);
+    border: 1px solid rgba(18,38,63,.06);
+  }
+
+  /* Home category tiles */
+  .ch-cat{
+    padding: 16px 14px;
+    text-align: center;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .ch-cat:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 22px 50px rgba(18,38,63,.14);
+  }
+  .ch-cat .ch-icon{
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background: #f2f6ff;
+    color: var(--ch-blue-dark);
+    margin-bottom: 10px;
+  }
+  .ch-cat .ch-cat-title{
+    font-weight: 800;
+    margin-bottom: 2px;
+    font-family: "Roboto", sans-serif !important;
+  }
+  .ch-cat .ch-cat-count{
+    font-size: 12px;
+    color: var(--ch-muted);
+  }
+
+  /* Featured pills */
+  .ch-logos{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 18px 26px;
+    justify-content:center;
+    align-items:center;
+    opacity: .90;
+  }
+  .ch-logo-pill{
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px dashed rgba(18,38,63,.18);
+    font-weight: 800;
+    color: rgba(18,38,63,.70);
+    background: #fff;
+    font-family: "Roboto", sans-serif !important;
+  }
+
+  /* Blue section (for about/popular) */
+  .ch-section-blue{
+    position: relative;
+    overflow: hidden;
+    background: white;
+    color:#fff;
+    padding: 56px 0;
+  }
+  .ch-section-blue .container{ position: relative; z-index: 2; }
+
+  .ch-pop-card{
+    height: 100%;
+    padding: 16px;
+    border-radius: 14px;
+    background:#fff;
+    border: 1px solid rgba(18,38,63,.06);
+    box-shadow: var(--ch-shadow-sm);
+  }
+  .ch-pop-card h6{
+    font-weight: 900;
+    margin-bottom: 8px;
+    font-family: "Roboto", sans-serif !important;
+  }
+  .ch-pop-card p{
+    color: var(--ch-muted);
+    font-size: 13px;
+    margin: 0 0 10px;
+  }
+  .ch-pop-card a{
+    font-weight: 800;
+    font-size: 13px;
+    color: #1a73e8;
+  }
+
+  /* Collection listing tiles */
+  .ch-tile{
+    background:#fff;
+    border: 1px solid rgba(18,38,63,.06);
+    box-shadow: var(--ch-shadow-sm);
+    border-radius: 10px;
+    padding: 16px 10px;
+    text-align:center;
+    font-size: 13px;
+    color: rgba(18,38,63,.82);
+    transition: transform .15s ease, box-shadow .15s ease;
+    min-height: 58px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .ch-tile:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 18px 34px rgba(18,38,63,.12);
+  }
+
+/* ---------------------------
+   Calculator Page Hero (Reference-like)
+   Left blue + diagonal cut
+   ---------------------------- */
+   .ch-calc-hero{
+    position: relative;
+    padding: 95px 0 50px;
+    overflow: hidden;
+    background: #ffffff;
+  }
+  .ch-calc-hero .ch-bg-left{
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 48%;
+    background: linear-gradient(135deg, var(--ch-blue) 0%, var(--ch-blue-dark) 100%);
+    z-index: 1;
+  }
+  .ch-calc-hero .ch-bg-left::after{
+    content:"";
+    position:absolute;
+    inset:-80px -120px -120px -120px;
+    opacity:.35;
+    background-image:
+    linear-gradient(135deg, rgba(255,255,255,.10) 0 40%, transparent 40% 100%),
+    linear-gradient(45deg, rgba(255,255,255,.10) 0 35%, transparent 35% 100%),
+    linear-gradient(120deg, rgba(255,255,255,.08) 0 38%, transparent 38% 100%);
+    background-size: 360px 260px, 420px 300px, 520px 360px;
+    background-position: 0 0, 120px 40px, 220px 140px;
+  }
+  .ch-calc-hero .ch-bg-diagonal{
+    position:absolute;
+    top:0; bottom:0;
+    left: 44%;
+    width: 180px;
+    background: #ffffff;
+    transform: skewX(-18deg);
+    z-index: 2;
+    box-shadow: 0 0 0 1px rgba(18,38,63,.03);
+  }
+  .ch-calc-hero .container{ position: relative; z-index: 3; }
+
+  /* Left calc card */
+  .ch-calc-card{
+    width: 360px;
+    max-width: 100%;
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid rgba(18,38,63,.06);
+    box-shadow: var(--ch-shadow);
+  }
+  .ch-calc-card .ch-calc-head{
+    font-weight: 900;
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-family: "Roboto", sans-serif !important;
+  }
+  .ch-calc-card label{
+    font-size: 11px;
+    color: var(--ch-muted);
+    margin-bottom: 6px;
+  }
+  .ch-calc-card .form-control,
+  .ch-calc-card .form-select{
+    border-radius: 10px;
+    height: 38px;
+    font-size: 13px;
+  }
+  .ch-btn{
+    height: 36px;
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: 13px;
+    font-family: "Roboto", sans-serif !important;
+  }
+
+  /* Result lines */
+  .ch-result{
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(18,38,63,.08);
+  }
+  .ch-result .ch-line{
+    display:flex;
+    justify-content:space-between;
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+  .ch-result .ch-line b{
+    font-weight: 900;
+    font-family: "Roboto", sans-serif !important;
+  }
+  .ch-note{
+    font-size: 11px;
+    color: var(--ch-muted);
+  }
+
+  /* Right title + intro box */
+  .ch-calc-title{
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: -.5px;
+    color:#1b2635;
+    font-family: "Roboto", sans-serif !important;
+  }
+  .ch-intro{
+    background:#fff;
+    border-radius: 14px;
+    border: 1px solid rgba(18,38,63,.06);
+    box-shadow: var(--ch-shadow-sm);
+    padding: 18px;
+    max-width: 760px;
+  }
+  .ch-intro h6{
+    font-weight: 900;
+    margin-bottom: 6px;
+    font-family: "Roboto", sans-serif !important;
+  }
+  .ch-intro p{
+    margin:0 0 12px;
+    color: var(--ch-muted);
+    font-size: 13px;
+  }
+  .ch-intro .ch-quick{
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(18,38,63,.08);
+    font-size: 12px;
+  }
+  .ch-intro .ch-quick a{
+    color:#1a73e8;
+    font-weight: 800;
+  }
+  .ch-intro ul{
+    margin: 6px 0 0;
+    padding-left: 16px;
+  }
+
+  /* Article (center narrow) */
+  .ch-article{
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .ch-article h3{
+    font-weight: 900;
+    margin-top: 30px;
+    margin-bottom: 8px;
+    font-family: "Roboto", sans-serif !important;
+  }
+  .ch-article p{
+    color: rgba(18,38,63,.78);
+    line-height: 1.85;
+    font-size: 14px;
+  }
+
+  /* People also viewed strip */
+  .ch-blue-strip{
+    background: linear-gradient(135deg, var(--ch-blue) 0%, var(--ch-blue-dark) 100%);
+    position: relative;
+    overflow:hidden;
+  }
+  .ch-blue-strip::before{
+    content:"";
+    position:absolute;
+    inset:-80px -120px -120px -120px;
+    opacity:.25;
+    background-image:
+    linear-gradient(135deg, rgba(255,255,255,.10) 0 40%, transparent 40% 100%),
+    linear-gradient(45deg, rgba(255,255,255,.10) 0 35%, transparent 35% 100%);
+    background-size: 380px 280px, 480px 340px;
+    background-position: 40px 0, 160px 160px;
+  }
+  .ch-blue-strip .container{ position:relative; z-index:2; }
+
+  .ch-mini-card{
+    background:#fff;
+    border-radius: 12px;
+    padding: 16px;
+    height:100%;
+    box-shadow: var(--ch-shadow-sm);
+    border: 1px solid rgba(18,38,63,.06);
+  }
+  .ch-mini-card h6{
+    font-weight: 900;
+    margin-bottom: 8px;
+    font-family: "Roboto", sans-serif !important;
+  }
+  .ch-mini-card p{
+    font-size: 12px;
+    color: var(--ch-muted);
+    margin:0 0 10px;
+  }
+  .ch-mini-card a{
+    font-weight: 900;
+    color:#1a73e8;
+    font-size: 12px;
+  }
+
+  /* Footer */
+  .ch-footer{
+    padding: 46px 0;
+    border-top: 1px solid rgba(18,38,63,.08);
+  }
+  .ch-social a{
+    width: 36px; height:36px;
+    border-radius: 999px;
+    display:inline-flex;
+    align-items:center; justify-content:center;
+    border: 1px solid rgba(18,38,63,.14);
+    color: rgba(18,38,63,.70);
+    margin-right: 8px;
+  }
+  .ch-social a:hover{
+    color: rgba(18,38,63,.92);
+    border-color: rgba(18,38,63,.28);
+  }
+/* ==========================================================
+   VIDEO-LIKE CALCULATOR PAGE (BLUE THEME) - Add-on Styles
+   Sticky Left Panel + Right Article + Hello Card + Viewed Strip
+   Uses existing vars: --ch-blue / --ch-blue-dark
+   ========================================================== */
+
+   /* ---------- Topbar (header like video) ---------- */
+   .ch-topbar{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: rgba(255,255,255,.86);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(18,38,63,.06);
+    padding: 20px 0;
+  }
+  .ch-icon-btn{
+    border: 1px solid rgba(18,38,63,.12);
+    border-radius: 10px;
+    padding: 6px 10px;
+    background:#fff;
+  }
+  .ch-icon-btn i{ font-size: 18px; }
+
+  .ch-toplink{
+    color: rgba(18,38,63,.70);
+    font-weight: 800;
+    font-size: 13px;
+  }
+  .ch-toplink:hover{ color: rgba(18,38,63,.95); }
+
+  .ch-share-btn{
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    border: 1px solid rgba(18,38,63,.14);
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    color: rgba(18,38,63,.70);
+  }
+  .ch-share-btn:hover{
+    color: rgba(18,38,63,.95);
+    border-color: rgba(18,38,63,.28);
+  }
+
+  /* Search pill */
+  .ch-search{
+    position: relative;
+
+  }
+  .ch-search i{
+    position:absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(18,38,63,.55);
+  }
+  .ch-search input{
+    width: 100%;
+    height: 34px;
+    border-radius: 999px;
+    border: 1px solid rgba(15,111,174,.35);
+    padding: 0 12px 0 34px;
+    outline: none;
+    font-size: 13px;
+    background: #fff;
+  }
+  .ch-search input:focus{
+    border-color: rgba(15,111,174,.65);
+    box-shadow: 0 0 0 4px rgba(15,111,174,.10);
+  }
+
+  /* ---------- Split hero area (left blue + diagonal + right white) ---------- */
+  .ch-split{
+    position: relative;
+    overflow: hidden;
+    padding: 22px 0 42px;
+  }
+  .ch-split-left{
+    position:absolute;
+    left:0; top:0; bottom:0;
+    width: 38%;
+    
+    z-index: 1;
+  }
+  .bg-pill{
+    background-image: url(../images/bg-poly.png);
+    background-position: top left;
+    background-repeat: no-repeat; 
+  }
+
+  .pills-main{
+    display: flex;
+    gap: 78px;
+  }
+  .ch-split-diagonal{
+    position:absolute;
+    top:0; bottom:0;
+    z-index: 2;
+    box-shadow: 0 0 0 1px rgba(18,38,63,.03);
+  }
+  .ch-split .container,
+  .ch-split .container-fluid{ position:relative; z-index:3; }
+
+  /* ---------- Left sticky group ---------- */
+  .ch-sticky-wrap{
+    position: sticky;
+    top: 76px; /* topbar height */
+    max-width: 430px;
+    margin-left: 10px;
+  }
+
+  /* ---------- Calculator panel (inputs list like video) ---------- */
+  .ch-calc-panel{
+    background:#fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px 0 var(--ch-shadow-sm) ;
+    overflow:hidden;
+  }
+  .ch-calc-list{ padding: 10px 0; }
+
+  .ch-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap: 10px;
+    padding: 10px 12px;
+    border-top: 1px solid rgba(18,38,63,.06);
+  }
+  .ch-row:first-child{ border-top: none; }
+
+  .ch-row-label{
+    font-size: 14px;
+    color: rgba(18,38,63,.70);
+  }
+  .ch-row-control{
+    width: 150px;
+    display:flex;
+    justify-content:flex-end;
+  }
+  .ch-input, .ch-select{
+    height: 30px !important;
+    border-radius: 8px !important;
+    font-size: 12px !important;
+  }
+
+  /* ---------- Result box below panel ---------- */
+  .ch-result-box{
+    margin-top: 12px;
+    background:#fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px 0 var(--ch-shadow-sm);
+    padding: 12px;
+  }
+  .ch-result-title{
+    font-weight: 900;
+    font-family:"Roboto",sans-serif !important;
+    font-size: 13px;
+    color: rgba(18,38,63,.80);
+  }
+  .ch-result-value{
+    font-family:"Roboto",sans-serif !important;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.1;
+    margin-top: 2px;
+  }
+  .ch-result-note{
+    font-size: 12px;
+    color: rgba(18,38,63,.60);
+    margin-top: 6px;
+  }
+
+  /* small buttons */
+  .ch-outline-pill{
+    border-radius: 999px !important;
+    border: 1px solid rgba(15,111,174,.35) !important;
+    color: rgba(18,38,63,.72) !important;
+    font-weight: 900 !important;
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+    background:#fff !important;
+  }
+  .ch-round-btn{
+    width: 34px;
+    height: 34px;
+    border-radius: 999px !important;
+    border: 1px solid rgba(18,38,63,.14) !important;
+    background:#fff !important;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .ch-round-btn i{ color: rgba(18,38,63,.70); }
+
+  /* ---------- Blue wide CTA like video ---------- */
+  .ch-cta-wide{
+    margin-top: 12px;
+    width: 100%;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--ch-blue) 0%, var(--ch-blue-dark) 100%);
+    color:#fff;
+    font-weight: 900;
+    font-size: 12px;
+    padding: 10px 12px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow: 0 14px 30px rgba(11,95,154,.22);
+  }
+  .ch-cta-wide:hover{ color:#fff; opacity:.95; }
+
+  /* ---------- 2x2 tiles below CTA ---------- */
+  .ch-pill-tile{
+    width:100%;
+    border-radius: 10px;
+    background:#fff;
+    box-shadow: 0 6px 20px 0 var(--ch-shadow-sm);
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(18,38,63,.75);
+    padding: 10px 12px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .ch-pill-tile:hover{ color: rgba(18,38,63,.95); }
+  .ch-pill-strong{
+    background: linear-gradient(135deg, var(--ch-blue) 0%, var(--ch-blue-dark) 100%);
+    color:#fff !important;
+    border-color: transparent !important;
+  }
+  .right-side, .left-side{
+    margin-top: 85px;
+  }
+  /* ---------- Right content area ---------- */
+  .ch-right-wrap{
+    padding: 10px 6px 0 6px;
+  }
+  .ch-page-title{
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: -.6px;
+    margin: 0 0 12px;
+    font-family:"Roboto",sans-serif !important;
+  }
+
+  /* ---------- Hello card (like video popup inside page) ---------- */
+  /*.ch-hello-card{
+    position: relative;
+    background:#fff;
+    border: 1px solid rgba(18,38,63,.08);
+    border-radius: 12px;
+    box-shadow: var(--ch-shadow-sm);
+    padding: 14px;
+    max-width: 540px;
+    margin-bottom: 14px;
+    }*/
+    .ch-hello-close{
+      position:absolute;
+      top: 8px;
+      right: 8px;
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      border: 1px solid rgba(18,38,63,.12);
+      background:#fff;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      color: rgba(18,38,63,.65);
+    }
+    .ch-hello-title{
+      font-family:"Roboto",sans-serif !important;
+      font-weight: 900;
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+    .ch-hello-text{
+      font-size: 12px;
+      color: rgba(18,38,63,.60);
+    }
+
+    /* Tip box inside hello card */
+    .ch-tip-box{
+      margin-top: 10px;
+      border-radius: 10px;
+      padding: 10px;
+      background: linear-gradient(135deg, var(--ch-blue) 0%, var(--ch-blue-dark) 100%);
+      color:#fff;
+    }
+    .ch-tip-label{
+      font-weight: 900;
+      font-size: 11px;
+      text-transform: uppercase;
+      opacity: .95;
+      margin-bottom: 4px;
+      font-family:"Roboto",sans-serif !important;
+    }
+    .ch-tip-text{
+      font-size: 12px;
+      opacity: .95;
+    }
+
+    .ch-toc-title{
+      margin-top: 10px;
+      font-weight: 900;
+      font-size: 12px;
+      color: rgba(18,38,63,.70);
+      font-family:"Roboto",sans-serif !important;
+    }
+    .ch-toc{
+      margin: 6px 0 0;
+      padding-left: 16px;
+    }
+    .ch-toc li{ margin: 4px 0; font-size: 12px; }
+    .ch-toc a{
+      color: var(--ch-blue-dark);
+      font-weight: 600;
+    }
+    .ch-toc a:hover{ text-decoration: underline; }
+
+    /* ---------- Article typography ---------- */
+    .ch-article{
+      max-width: 720px;
+    }
+    .ch-article .ch-lead{
+      font-size: 13px;
+      color: rgba(18,38,63,.70);
+      line-height: 1.85;
+    }
+    .ch-article h2{
+      font-weight: 700;
+      font-size: 18px;
+      margin-top: 22px;
+      margin-bottom: 8px;
+      font-family:"Roboto",sans-serif !important;
+    }
+    .ch-article p{
+      font-size: 13px;
+      color: rgba(18,38,63,.78);
+      line-height: 1.85;
+    }
+
+    /* Formula block (optional) */
+    .ch-formula{
+      margin: 12px 0;
+      background:#fff;
+      border: 1px solid rgba(18,38,63,.10);
+      border-radius: 12px;
+      box-shadow: var(--ch-shadow-sm);
+      padding: 14px;
+    }
+    .ch-formula-line{
+      font-family:"Roboto",sans-serif !important;
+      font-weight: 900;
+      font-size: 18px;
+    }
+    .ch-formula-sub{
+      font-size: 12px;
+      color: rgba(18,38,63,.60);
+      margin-top: 6px;
+    }
+
+    /* ---------- People also viewed strip ---------- */
+    .ch-viewed-strip{
+      background: linear-gradient(135deg, var(--ch-blue) 0%, var(--ch-blue-dark) 100%);
+      position: relative;
+      overflow:hidden;
+      padding: 85px 0;
+      background-image: url(../images/bg-header.png);
+      background-repeat: no-repeat;
+    }
+    .oc-hero{
+      background-image: url(../images/bg-header.png);
+      background-repeat: no-repeat;
+    }
+    
+    .ch-viewed-strip .container,
+    .ch-viewed-strip .container-fluid{ position:relative; z-index:2; }
+
+    .ch-viewed-title{
+      color:#fff;
+      font-weight: 900;
+      font-family:"Roboto",sans-serif !important;
+      margin-bottom: 12px;
+    }
+    .ch-view-card{
+      background:#fff;
+      border-radius: 12px;
+      padding: 14px;
+      border: 1px solid rgba(18,38,63,.06);
+      box-shadow: var(--ch-shadow-sm);
+      height: 100%;
+    }
+    .ch-view-card-title{
+      font-family:"Roboto",sans-serif !important;
+      font-weight: 500;
+    }
+
+    .ch-view-card-btn{
+      font-family:"Roboto",sans-serif !important;
+      font-weight: 600;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    .ch-view-card-text{
+      font-size: 12px;
+      color: rgba(18,38,63,.65);
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 769px){
+      .left-side{
+        width: 900px !important;
+      }
+      .ch-right-wrap{
+        background-color: white;
+        border-top-left-radius: 10px; 
+        border-top-right-radius: 10px; 
+      }
+      .bg-pill{
+        background-size: contain;
+      }
+      .pills-main{
+        gap: 15px !important;
+
+      }
+      .ch-page-title{
+        font-size: 20px;
+      }
+      .ch-right-wrap {
+        padding: 20px 15px;
+      }
+    }
+
+    @media (max-width: 426px){
+      .left-side{
+        width: 100% !important;
+      }
+      .pills-main{
+        display: block !important;
+
+      }
+    }
