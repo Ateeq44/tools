@@ -33,6 +33,9 @@
   .text-primary{
     color: var(--ch-blue) !important;
   }
+  .nav-item .nav-link:hover{
+    color: var(--ch-blue) !important;
+  }
   a{
 
   }
