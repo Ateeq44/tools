@@ -37,7 +37,7 @@
     color: var(--ch-blue) !important;
   }
   .logo{
-    width: 250px;
+    width: 200px;
   }
 
   /* Global fonts */
@@ -894,5 +894,8 @@
       .pills-main{
         display: block !important;
 
+      }
+      .logo{
+        width: 150px;
       }
     }
