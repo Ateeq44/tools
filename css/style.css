@@ -36,8 +36,8 @@
   .nav-item .nav-link:hover{
     color: var(--ch-blue) !important;
   }
-  a{
-
+  .logo{
+    width: 250px;
   }
 
   /* Global fonts */
@@ -532,7 +532,9 @@
     background-position: top left;
     background-repeat: no-repeat; 
   }
-
+  .main{
+    margin-top: 70px;
+  }
   .pills-main{
     display: flex;
     gap: 78px;
@@ -682,7 +684,7 @@
     background: linear-gradient(265deg, var(--ch-blue) 0%, var(--ch-blue-dark) 100%);
   }
   .right-side, .left-side{
-    margin-top: 85px;
+    margin-top: 115px;
   }
   /* ---------- Right content area ---------- */
   .ch-right-wrap{
